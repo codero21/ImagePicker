@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: Outlets
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
