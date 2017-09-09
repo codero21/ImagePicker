@@ -24,16 +24,45 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sRr-WW-0xH">
                                 <rect key="frame" x="0.0" y="40" width="375" height="627"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igi-WU-T6c">
+                                <rect key="frame" x="20" y="532" width="335" height="51"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="CjW-wS-5s7"/>
+                                </constraints>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="onCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AfD-7y-711"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bal-LL-gWa">
+                                <rect key="frame" x="20" y="596" width="335" height="51"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="sXg-q4-OgI"/>
+                                </constraints>
+                                <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="onPhotoLibrary:" destination="BYZ-38-t0r" eventType="touchDragInside" id="Crz-CL-e2A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Bal-LL-gWa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="3Fi-Zh-Leo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bal-LL-gWa" secondAttribute="bottom" constant="20" id="3d8-wq-xG9"/>
                             <constraint firstItem="sRr-WW-0xH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3mx-bF-8af"/>
                             <constraint firstAttribute="trailing" secondItem="sRr-WW-0xH" secondAttribute="trailing" id="8eL-8l-hNl"/>
+                            <constraint firstAttribute="trailing" secondItem="igi-WU-T6c" secondAttribute="trailing" constant="20" id="8eN-GG-Wr7"/>
+                            <constraint firstItem="igi-WU-T6c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="C2r-gF-vUK"/>
+                            <constraint firstItem="Bal-LL-gWa" firstAttribute="top" secondItem="igi-WU-T6c" secondAttribute="bottom" constant="13" id="MCq-YJ-vIj"/>
+                            <constraint firstAttribute="trailing" secondItem="Bal-LL-gWa" secondAttribute="trailing" constant="20" id="OdA-d8-Dnc"/>
                             <constraint firstItem="sRr-WW-0xH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="hCh-hd-rxg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sRr-WW-0xH" secondAttribute="bottom" id="jjL-PL-W4E"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="igi-WU-T6c" id="ylA-fZ-Ke4"/>
                         <outlet property="imageView" destination="sRr-WW-0xH" id="rkv-qP-5Yl"/>
                     </connections>
                 </viewController>
